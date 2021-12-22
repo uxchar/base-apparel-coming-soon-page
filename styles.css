@@ -1,0 +1,173 @@
+:root {
+  /*primary*/
+  --clr-desaturated-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 93%, 68%);
+  /**neutrals*/
+  --clr-dark-grayish-red: hsl(0, 6%, 24%);
+  /*gradients*/
+  --grd-off-white: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --grd-rose: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  width: 375px;
+}
+
+.header-container {
+  width: 375px;
+  order: 1;
+}
+
+.logo {
+  margin: 20px;
+  height: auto;
+  width: 115px;
+}
+
+.card-img {
+  background-image: url("./images/hero-mobile.jpg");
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  order: 2;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 1.15;
+  margin: 60px auto 20px auto;
+}
+.title-span {
+  color: var(--clr-desaturated-red);
+  font-weight: 300;
+}
+
+.info-container {
+  order: 3;
+}
+
+.card-info {
+  text-align: center;
+  color: var(--clr-desaturated-red);
+  margin: auto 15px auto 15px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* email section */
+
+form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+}
+
+.email-input-field {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin: auto 15px;
+  border: 1px solid var(--clr-dark-grayish-red);
+}
+
+input {
+  text-indent: 30px;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: var(--clr-desaturated-red);
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.submit-button {
+  position: absolute;
+  margin-left: 290px;
+  border-radius: 30px;
+  width: 70px;
+  height: 50px;
+  background: var(--grd-rose);
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(255, 168, 168, 0.5) 0px 20px 50px;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin: 0px;
+  }
+
+  .header-container {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .info-container {
+    width: 450px;
+  }
+
+  .card-title {
+    text-align: left;
+  }
+
+  .card-info {
+    text-align: left;
+    margin: auto;
+  }
+
+  .card-img {
+    background-image: url(./images/hero-desktop.jpg);
+    height: 800px;
+    width: 610px;
+    background-size: contain;
+    order: 4;
+    justify-self: flex-end;
+  }
+
+  .email-container {
+    justify-content: flex-start;
+    margin-top: 60px;
+  }
+
+  .email-input-field {
+    margin: auto 0;
+  }
+
+  .submit-button {
+    margin-left: 380px;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "base-apparel-coming-soon-master",
+  "version": "1.0.0",
+  "description": "a simple shopping site component",
+  "main": "index.js",
+  "scripts": {
+    "test": "\u001b[A\u001b[A\u001b[B\u001b[B\u001b[B"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "email-validator": "^2.0.4"
+  }
+}
