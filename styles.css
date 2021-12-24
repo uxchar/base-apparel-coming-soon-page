@@ -18,6 +18,7 @@
 
 .main-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -25,15 +26,12 @@
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
   width: 375px;
 }
 
 .header-container {
-  width: 375px;
-  order: 1;
+  width: 100%;
 }
 
 .logo {
@@ -42,12 +40,12 @@
   width: 115px;
 }
 
-.card-img {
-  background-image: url("./images/hero-mobile.jpg");
-  height: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  order: 2;
+.img-mobile {
+  width: 100%;
+}
+
+.img-desktop {
+  display: none;
 }
 
 .card-title {
@@ -59,13 +57,10 @@
   line-height: 1.15;
   margin: 60px auto 20px auto;
 }
+
 .title-span {
   color: var(--clr-desaturated-red);
   font-weight: 300;
-}
-
-.info-container {
-  order: 3;
 }
 
 .card-info {
@@ -120,58 +115,72 @@ input {
 
 @media screen and (min-width: 768px) {
   .main-container {
-    display: block;
+    display: initial;
   }
+
   .card-container {
     width: 100%;
-    height: 800px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .card-title {
-    font-size: 65px;
-  }
-
-  .logo {
-    margin: 0px;
-  }
-
-  .header-container {
-    margin-top: 60px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0 2fr 1fr 0;
+    grid-template-rows: 1fr repeat(2, 0) 1fr repeat(2, 0);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
   .info-container {
     width: 60%;
+    grid-area: 1 / 1 / 5 / 3;
+    margin-top: 15%;
+  }
+
+  .header-container {
+    width: 60%;
+    margin-top: 60px;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .logo {
+    margin: auto 30%;
   }
 
   .card-title {
     text-align: left;
+    font-size: 4.5rem;
+    letter-spacing: 15px;
+    margin: 10% 30% 5% 30%;
   }
 
   .card-info {
     text-align: left;
-    margin: auto;
+    width: 80%;
+    margin: 5% 30% 5% 30%;
   }
 
-  .card-img {
-    background-image: url(./images/hero-desktop.jpg);
-    height: 800px;
-    width: 40%;
-    order: 4;
-    justify-self: flex-end;
+  .img-container {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 3 / 5 / 4;
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop {
+    display: inline-flex;
+    height: 100%;
   }
 
   .email-container {
-    justify-content: flex-start;
     margin-top: 60px;
   }
 
   .email-input-field {
-    margin: auto 0;
+    min-width: 300px;
+    margin-left: 30%;
   }
 
   .submit-button {
-    margin-left: 380px;
   }
 }
