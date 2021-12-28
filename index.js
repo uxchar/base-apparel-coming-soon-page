@@ -1,5 +1,5 @@
 function checkEmail() {
-  var email = document.querySelector("#user-input");
+  var email = document.querySelector(".email-input-field");
   var emailTest =
     /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
