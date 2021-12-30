@@ -28,7 +28,12 @@
   </head>
   <body>
     <main>
+      <!-- viewport container -->
+
       <div class="main-container">
+
+        <!-- card container for all elements -->
+
         <div class="card-container">
             <div class="header-container">
               <img src="./images/logo.svg" class="logo" alt="logo" />
@@ -37,6 +42,9 @@
               <img src="images/hero-mobile.jpg" class="img-mobile" alt="" />
               <img src="images/hero-desktop.jpg" class="img-desktop" alt="" />
             </div>
+
+            <!-- text below the img -->
+
             <div class="info-container">
             <h1 class="card-title">
               <span class="title-span">We're</span> coming soon
@@ -46,23 +54,28 @@
               store. Add your email below to stay up-to-date with announcements
               and our launch deals.
             </p>
+            
+            <!-- email section -->
+
             <div class="email-container">
                 <input
                   type="text"
                   class="email-input-field"
                   placeholder="Email Address"
+                  required
                 />
                 <img src="./images/icon-error.svg" class="error-icon" />
 
                 <button
                   class="submit-button"
                   value="Submit"
+                  type="submit"
                   onclick="Javascript:checkEmail();"
                 >
                   <img src="./images/icon-arrow.svg" />
                 </button>
             </div>
-          <div class="error-message">Please provide a valid email</div>
+          <div class="error-message"></div>
           </div>
           </div>
         </div>

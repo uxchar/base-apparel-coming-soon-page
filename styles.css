@@ -16,6 +16,8 @@
   box-sizing: border-box;
 }
 
+/* mobile first design */
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -114,7 +116,6 @@ input {
   margin: auto auto 60px 40px;
   font-size: 0.9rem;
   color: var(--clr-soft-red);
-  visibility: hidden;
 }
 
 .submit-button {
@@ -132,7 +133,7 @@ input {
 
 /* media queries */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1100px) {
   .main-container {
     display: initial;
   }
@@ -142,9 +143,9 @@ input {
     height: 100vh;
     display: grid;
     grid-template-columns: 0 2fr 1fr 0;
-    grid-template-rows: 1fr repeat(2, 0) 1fr repeat(2, 0);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    background: url(./images/bg-pattern-desktop.svg) left no-repeat,
+      linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-size: 60%;
   }
 
   .info-container {
@@ -196,6 +197,10 @@ input {
     margin-top: 60px;
     margin-left: 30%;
     max-width: 80%;
+  }
+
+  .email-input-field {
+    background-color: var(--grd-off-white);
   }
 
   .submit-button {
